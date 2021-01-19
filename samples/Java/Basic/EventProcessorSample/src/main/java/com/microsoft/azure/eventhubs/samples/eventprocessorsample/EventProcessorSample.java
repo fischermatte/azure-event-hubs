@@ -28,13 +28,13 @@ public class EventProcessorSample
     	// account. All instances of EventProcessorHost which will be consuming from the same Event Hub and consumer
     	// group must use the same Azure Storage account and container name.
     	String consumerGroupName = "$Default";
-    	String namespaceName = "----ServiceBusNamespaceName----";
-    	String eventHubName = "----EventHubName----";
-    	String sasKeyName = "----SharedAccessSignatureKeyName----";
-    	String sasKey = "----SharedAccessSignatureKey----";
-    	String storageConnectionString = "----AzureStorageConnectionString----";
-    	String storageContainerName = "----StorageContainerName----";
-    	String hostNamePrefix = "----HostNamePrefix----";
+    	String namespaceName = "eventhub-fm";
+    	String eventHubName = "eventhub-instance-fm";
+    	String sasKeyName = "RootManageSharedAccessKey";
+    	String sasKey = "d96WGMMGNsN2nSDJq/mqyg2pKmHH+nmgYi/LlN1ZSdc=";
+    	String storageConnectionString = "DefaultEndpointsProtocol=https;EndpointSuffix=core.windows.net;AccountName=hubstoragefm;AccountKey=y5SGJYafUwq2J1kK24YDj8KIN0V7c5ok+Mbk+TpdO9h0kOtlxNXcq2oVVd58TAIn+7R2Le7xAHQI31Si4CWmgw==";
+    	String storageContainerName = "messages";
+    	String hostNamePrefix = "hubstoragefm";
     	
     	// To conveniently construct the Event Hub connection string from the raw information, use the ConnectionStringBuilder class.
     	ConnectionStringBuilder eventHubConnectionString = new ConnectionStringBuilder()
